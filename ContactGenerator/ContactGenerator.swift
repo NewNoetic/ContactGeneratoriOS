@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import PromiseKit
+import Contacts
 
 struct BasicContact {
     var firstName: String
@@ -60,6 +61,29 @@ struct ContactGenerator {
     }
     
     static func saveToDevice(_ contacts: [BasicContact]) {
+        let deviceContacts = contacts.map { (basicContact) -> CNMutableContact in
+            let contact = CNMutableContact()
+            contact.givenName = basicContact.firstName
+            contact.familyName = basicContact.lastName
+            
+            let email = CNLabeledValue(label: CNLabelHome, value: basicContact.email as NSString)
+            contact.emailAddresses = [email]
+            
+            contact.phoneNumbers = [CNLabeledValue(
+                label:CNLabelPhoneNumberMain,
+                value:CNPhoneNumber(stringValue:basicContact.phone))]
+            
+            return contact
+        }
+     
+        // Saving the newly created contact
+        let store = CNContactStore()
+        let saveRequest = CNSaveRequest()
         
+        deviceContacts.forEach { (c) in
+            saveRequest.add(c, toContainerWithIdentifier:nil)
+        }
+        
+        try! store.execute(saveRequest)
     }
 }

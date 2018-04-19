@@ -25,4 +25,10 @@ class ContactGeneratorTests: XCTestCase {
         
         wait(for: [expectation], timeout: 10.0)
     }
+    
+    func testSaveToDevice() {
+        let basicContact = BasicContact(firstName: UUID().uuidString, lastName: UUID().uuidString, email: "sidhant.gandhi@gmail.com", phone: "1234")
+        
+        ContactGenerator.saveToDevice([basicContact])
+    }
 }
