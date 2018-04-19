@@ -17,25 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Wqz-ov-vhK">
-                                <rect key="frame" x="16" y="271.5" width="343" height="123.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Wqz-ov-vhK">
+                                <rect key="frame" x="16" y="36" width="343" height="161.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dak-Pb-5Ae">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dak-Pb-5Ae">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="31.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYn-6f-43s">
-                                        <rect key="frame" x="0.0" y="47.5" width="343" height="30"/>
-                                        <state key="normal" title="Add random"/>
+                                        <rect key="frame" x="0.0" y="63.5" width="343" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <state key="normal" title="Add random">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="addTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LCe-Le-IFE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOC-bO-TOK">
-                                        <rect key="frame" x="0.0" y="93.5" width="343" height="30"/>
-                                        <state key="normal" title="Delete all"/>
+                                        <rect key="frame" x="0.0" y="128.5" width="343" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <state key="normal" title="Delete all">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="deleteAllTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Xc-kt-WNW"/>
                                         </connections>
@@ -43,11 +49,11 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.15686274510000001" green="0.0" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Wqz-ov-vhK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="FzD-3x-5xU"/>
                             <constraint firstItem="Wqz-ov-vhK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="W6X-d5-Xj4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wqz-ov-vhK" secondAttribute="trailing" constant="16" id="Yet-Le-jLS"/>
-                            <constraint firstItem="Wqz-ov-vhK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mi1-d9-ftq"/>
                             <constraint firstItem="Wqz-ov-vhK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="til-9m-LMp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

@@ -21,6 +21,9 @@
 		DC60505620891E6600D0E9C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC60505420891E6600D0E9C6 /* LaunchScreen.storyboard */; };
 		DC60505B20891E8600D0E9C6 /* ContactGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC578DC020890788007CDAE4 /* ContactGenerator.framework */; };
 		DC60505C20891E8600D0E9C6 /* ContactGenerator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC578DC020890788007CDAE4 /* ContactGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DC60506420895D9200D0E9C6 /* IntroPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC60506120895D9200D0E9C6 /* IntroPageViewController.swift */; };
+		DC60506520895D9200D0E9C6 /* IntroPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC60506220895D9200D0E9C6 /* IntroPageViewController.xib */; };
+		DC60506820895DAF00D0E9C6 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC60506720895DAF00D0E9C6 /* IntroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		DC60505220891E6600D0E9C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC60505520891E6600D0E9C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC60505720891E6600D0E9C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC60506120895D9200D0E9C6 /* IntroPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroPageViewController.swift; sourceTree = "<group>"; };
+		DC60506220895D9200D0E9C6 /* IntroPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroPageViewController.xib; sourceTree = "<group>"; };
+		DC60506720895DAF00D0E9C6 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +183,9 @@
 		DC60504A20891E6100D0E9C6 /* ContactGeneratoriOS */ = {
 			isa = PBXGroup;
 			children = (
+				DC60506720895DAF00D0E9C6 /* IntroViewController.swift */,
+				DC60506120895D9200D0E9C6 /* IntroPageViewController.swift */,
+				DC60506220895D9200D0E9C6 /* IntroPageViewController.xib */,
 				DC60504B20891E6100D0E9C6 /* AppDelegate.swift */,
 				DC60504D20891E6100D0E9C6 /* ViewController.swift */,
 				DC60504F20891E6200D0E9C6 /* Main.storyboard */,
@@ -325,6 +334,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC60506520895D9200D0E9C6 /* IntroPageViewController.xib in Resources */,
 				DC60505620891E6600D0E9C6 /* LaunchScreen.storyboard in Resources */,
 				DC60505320891E6600D0E9C6 /* Assets.xcassets in Resources */,
 				DC60505120891E6200D0E9C6 /* Main.storyboard in Resources */,
@@ -496,7 +506,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC60506820895DAF00D0E9C6 /* IntroViewController.swift in Sources */,
 				DC60504E20891E6100D0E9C6 /* ViewController.swift in Sources */,
+				DC60506420895D9200D0E9C6 /* IntroPageViewController.swift in Sources */,
 				DC60504C20891E6100D0E9C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -672,7 +684,11 @@
 				INFOPLIST_FILE = ContactGenerator/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.newnoetic.ContactGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -698,7 +714,11 @@
 				INFOPLIST_FILE = ContactGenerator/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.newnoetic.ContactGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -715,7 +735,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CUCB33MFQZ;
 				INFOPLIST_FILE = ContactGeneratorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.newnoetic.ContactGeneratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -731,7 +755,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CUCB33MFQZ;
 				INFOPLIST_FILE = ContactGeneratorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.newnoetic.ContactGeneratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -749,7 +777,10 @@
 				DEVELOPMENT_TEAM = CUCB33MFQZ;
 				INFOPLIST_FILE = ContactGeneratoriOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.newnoetic.ContactGeneratoriOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -767,7 +798,10 @@
 				DEVELOPMENT_TEAM = CUCB33MFQZ;
 				INFOPLIST_FILE = ContactGeneratoriOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.newnoetic.ContactGeneratoriOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
