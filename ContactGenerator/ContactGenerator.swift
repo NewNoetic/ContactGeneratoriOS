@@ -11,20 +11,20 @@ import Alamofire
 import PromiseKit
 import Contacts
 
-struct BasicContact {
-    var firstName: String
-    var lastName: String
-    var email: String
-    var phone: String
+public struct BasicContact {
+    public var firstName: String
+    public var lastName: String
+    public var email: String
+    public var phone: String
 }
 
-enum ContactGeneratorError: Error {
+public enum ContactGeneratorError: Error {
     case JSON
     case Data
 }
 
-struct ContactGenerator {
-    static func generate() -> Promise<[BasicContact]> {
+public struct ContactGenerator {
+    public static func generate(count: Int = 1) -> Promise<[BasicContact]> {
         return Promise { seal in
             Alamofire.request("https://randomuser.me/api").responseJSON { response in
 //                print("Request: \(String(describing: response.request))")   // original url request
@@ -47,8 +47,8 @@ struct ContactGenerator {
                 
                 let contacts = jsonArray.compactMap({ (contactData: [String: Any]) -> BasicContact? in
                     guard let name: [String: String] = contactData["name"] as? [String: String] else { return nil }
-                    guard let firstName = name["first"] else { return nil }
-                    guard let lastName = name["last"] else { return nil }
+                    guard let firstName = name["first"]?.localizedCapitalized else { return nil }
+                    guard let lastName = name["last"]?.localizedCapitalized else { return nil }
                     guard let email = contactData["email"] as? String else { return nil }
                     guard let phone = contactData["phone"] as? String else { return nil }
                     
@@ -60,7 +60,7 @@ struct ContactGenerator {
         }
     }
     
-    static func saveToDevice(_ contacts: [BasicContact]) {
+    public static func saveToDevice(_ contacts: [BasicContact]) {
         let deviceContacts = contacts.map { (basicContact) -> CNMutableContact in
             let contact = CNMutableContact()
             contact.givenName = basicContact.firstName
@@ -85,5 +85,24 @@ struct ContactGenerator {
         }
         
         try! store.execute(saveRequest)
+    }
+    
+    public static func deleteAllContacts() {
+        let store = CNContactStore()
+        store.requestAccess(for: .contacts) { (granted, error: Error?) in
+            guard granted else { return }
+            let predicate = CNContact.predicateForContactsInContainer(withIdentifier: store.defaultContainerIdentifier())
+            let deleteRequest = CNSaveRequest()
+            guard let contacts = try? store.unifiedContacts(matching: predicate, keysToFetch: [CNContactGivenNameKey as CNKeyDescriptor]) else { return }
+            contacts.forEach({ (c) in
+                deleteRequest.delete(c.mutableCopy() as! CNMutableContact)
+            })
+            
+            do {
+                try store.execute(deleteRequest)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
 }
