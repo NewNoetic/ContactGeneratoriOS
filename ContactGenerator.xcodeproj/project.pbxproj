@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79296487BCA5A5F5E1BA5A8D /* Pods_ContactGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50198817AED49B73B851D422 /* Pods_ContactGenerator.framework */; };
+		C229205EEAD1EB2287BF2C41 /* Pods_ContactGeneratorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F95254B0669ED2E0484435 /* Pods_ContactGeneratorTests.framework */; };
 		DC578DCA20890788007CDAE4 /* ContactGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC578DC020890788007CDAE4 /* ContactGenerator.framework */; };
 		DC578DCF20890788007CDAE4 /* ContactGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC578DCE20890788007CDAE4 /* ContactGeneratorTests.swift */; };
 		DC578DD120890788007CDAE4 /* ContactGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = DC578DC320890788007CDAE4 /* ContactGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC60504420890EF000D0E9C6 /* ContactGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC60504320890EF000D0E9C6 /* ContactGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +26,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00F95254B0669ED2E0484435 /* Pods_ContactGeneratorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactGeneratorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E49A1DC645A12A5FEE73920 /* Pods-ContactGeneratorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactGeneratorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactGeneratorTests/Pods-ContactGeneratorTests.release.xcconfig"; sourceTree = "<group>"; };
+		50198817AED49B73B851D422 /* Pods_ContactGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5368F91A33F97BF58375E571 /* Pods-ContactGenerator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactGenerator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactGenerator/Pods-ContactGenerator.debug.xcconfig"; sourceTree = "<group>"; };
+		BBA893DD288C6A3377992687 /* Pods-ContactGenerator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactGenerator.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactGenerator/Pods-ContactGenerator.release.xcconfig"; sourceTree = "<group>"; };
+		CE14C623483F2F944FA99C9E /* Pods-ContactGeneratorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactGeneratorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactGeneratorTests/Pods-ContactGeneratorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC578DC020890788007CDAE4 /* ContactGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ContactGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC578DC320890788007CDAE4 /* ContactGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactGenerator.h; sourceTree = "<group>"; };
 		DC578DC420890788007CDAE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC578DC920890788007CDAE4 /* ContactGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC578DCE20890788007CDAE4 /* ContactGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactGeneratorTests.swift; sourceTree = "<group>"; };
 		DC578DD020890788007CDAE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC60504320890EF000D0E9C6 /* ContactGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79296487BCA5A5F5E1BA5A8D /* Pods_ContactGenerator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +55,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC578DCA20890788007CDAE4 /* ContactGenerator.framework in Frameworks */,
+				C229205EEAD1EB2287BF2C41 /* Pods_ContactGeneratorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE8DEE8792A569EDBE614722 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5368F91A33F97BF58375E571 /* Pods-ContactGenerator.debug.xcconfig */,
+				BBA893DD288C6A3377992687 /* Pods-ContactGenerator.release.xcconfig */,
+				CE14C623483F2F944FA99C9E /* Pods-ContactGeneratorTests.debug.xcconfig */,
+				2E49A1DC645A12A5FEE73920 /* Pods-ContactGeneratorTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C7ED61A72C0890618F3AB2B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50198817AED49B73B851D422 /* Pods_ContactGenerator.framework */,
+				00F95254B0669ED2E0484435 /* Pods_ContactGeneratorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DC578DB620890788007CDAE4 = {
 			isa = PBXGroup;
 			children = (
 				DC578DC220890788007CDAE4 /* ContactGenerator */,
 				DC578DCD20890788007CDAE4 /* ContactGeneratorTests */,
 				DC578DC120890788007CDAE4 /* Products */,
+				AE8DEE8792A569EDBE614722 /* Pods */,
+				C7ED61A72C0890618F3AB2B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +107,7 @@
 			children = (
 				DC578DC320890788007CDAE4 /* ContactGenerator.h */,
 				DC578DC420890788007CDAE4 /* Info.plist */,
+				DC60504320890EF000D0E9C6 /* ContactGenerator.swift */,
 			);
 			path = ContactGenerator;
 			sourceTree = "<group>";
@@ -104,10 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC578DD420890788007CDAE4 /* Build configuration list for PBXNativeTarget "ContactGenerator" */;
 			buildPhases = (
+				BB40F9F8122ACA3EF593E5EA /* [CP] Check Pods Manifest.lock */,
 				DC578DBB20890788007CDAE4 /* Sources */,
 				DC578DBC20890788007CDAE4 /* Frameworks */,
 				DC578DBD20890788007CDAE4 /* Headers */,
 				DC578DBE20890788007CDAE4 /* Resources */,
+				2EF8D832565B2C4F01ADF29E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC578DD720890788007CDAE4 /* Build configuration list for PBXNativeTarget "ContactGeneratorTests" */;
 			buildPhases = (
+				4A1BECEB5C0B98C08A758228 /* [CP] Check Pods Manifest.lock */,
 				DC578DC520890788007CDAE4 /* Sources */,
 				DC578DC620890788007CDAE4 /* Frameworks */,
 				DC578DC720890788007CDAE4 /* Resources */,
+				9DB0CDB651E4515B3EC0BB6E /* [CP] Embed Pods Frameworks */,
+				3A94231421713799FCE4C54C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +188,7 @@
 				TargetAttributes = {
 					DC578DBF20890788007CDAE4 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					DC578DC820890788007CDAE4 = {
 						CreatedOnToolsVersion = 9.3;
@@ -189,11 +230,101 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2EF8D832565B2C4F01ADF29E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactGenerator/Pods-ContactGenerator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A94231421713799FCE4C54C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactGeneratorTests/Pods-ContactGeneratorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A1BECEB5C0B98C08A758228 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ContactGeneratorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DB0CDB651E4515B3EC0BB6E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ContactGeneratorTests/Pods-ContactGeneratorTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactGeneratorTests/Pods-ContactGeneratorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB40F9F8122ACA3EF593E5EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ContactGenerator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC578DBB20890788007CDAE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC60504420890EF000D0E9C6 /* ContactGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +469,9 @@
 		};
 		DC578DD520890788007CDAE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5368F91A33F97BF58375E571 /* Pods-ContactGenerator.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.newnoetic.ContactGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,7 +497,9 @@
 		};
 		DC578DD620890788007CDAE4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBA893DD288C6A3377992687 /* Pods-ContactGenerator.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -388,7 +524,9 @@
 		};
 		DC578DD820890788007CDAE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE14C623483F2F944FA99C9E /* Pods-ContactGeneratorTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CUCB33MFQZ;
 				INFOPLIST_FILE = ContactGeneratorTests/Info.plist;
@@ -406,7 +544,9 @@
 		};
 		DC578DD920890788007CDAE4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E49A1DC645A12A5FEE73920 /* Pods-ContactGeneratorTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CUCB33MFQZ;
 				INFOPLIST_FILE = ContactGeneratorTests/Info.plist;
