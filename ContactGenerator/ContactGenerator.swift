@@ -27,16 +27,10 @@ public struct ContactGenerator {
     public static func generate(count: Int = 1) -> Promise<[BasicContact]> {
         return Promise { seal in
             Alamofire.request("https://randomuser.me/api").responseJSON { response in
-//                print("Request: \(String(describing: response.request))")   // original url request
-//                print("Response: \(String(describing: response.response))") // http url response
-//                print("Result: \(response.result)")                         // response serialization result
-                
                 guard let json = response.result.value else {
                     seal.reject(ContactGeneratorError.JSON)
                     return
                 }
-                
-//                print("JSON: \(json)") // serialized json response
                 
                 guard let jsonDictionary = json as? [String: Any] else { seal.reject(ContactGeneratorError.Data); return }
                 

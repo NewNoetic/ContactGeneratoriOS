@@ -11,30 +11,6 @@ import ContactGenerator
 import PromiseKit
 
 class ViewController: UIViewController {
-
-    let firstTimeKey = "FirstTimeKey"
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        var firstTime = UserDefaults.standard.bool(forKey: firstTimeKey)
-        
-//        #if DEBUG
-//        firstTime = false
-//        #endif
-//
-//        guard firstTime != false else {
-//            UserDefaults.standard.set(true, forKey: firstTimeKey)
-//            self.present(IntroViewController(), animated: true, completion: nil)
-//            return
-//        }
-    }
-
     @IBAction func addTapped(_ sender: Any) {
         ContactGenerator.generate()
             .done { (contacts) in
